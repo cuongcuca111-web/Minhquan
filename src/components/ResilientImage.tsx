@@ -16,7 +16,12 @@ export function ResilientImage({
 }: ResilientImageProps) {
   const [failed, setFailed] = useState(false);
 
-  if (failed || !src) {
+  const resolvedSrc =
+    src && src.startsWith('/') && !src.startsWith('//')
+      ? `${import.meta.env.BASE_URL}${src.slice(1)}`
+      : src;
+
+  if (failed || !resolvedSrc) {
     return (
       <div
         role="img"
@@ -33,7 +38,7 @@ export function ResilientImage({
 
   return (
     <img
-      src={src}
+      src={resolvedSrc}
       alt={alt}
       referrerPolicy="no-referrer"
       onError={() => setFailed(true)}
