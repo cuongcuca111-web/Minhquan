@@ -1,0 +1,6 @@
+{
+  "name": "Nhóm 6 Tư Duy Sáng Tạo — NCKH Sinh Viên Nhân Văn",
+  "description": "Cổng thông tin và chia sẻ công trình nghiên cứu khoa học sinh viên theo hệ thống phân loại khoa học các ngành đào tạo Trường Đại học Khoa học Xã hội và Nhân văn.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
